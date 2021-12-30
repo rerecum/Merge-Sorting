@@ -36,7 +36,7 @@ void merge(int arr[], int lewy, int m, int prawy)
         j++;
         k++;
     }
-    for (int s = 0; s < 5; s++)
+    for (int s = lewy; s <= prawy; s++)
     {
         arr[s] = temp[s];
     }
@@ -55,6 +55,7 @@ void mergeSort(int arr[], int lewy, int prawy)
 
 int main()
 {
+    cout << "Podaj 5 liczb: ";
     int myarr[5];
     for (int i = 0; i < 5; i++)
     {
@@ -68,7 +69,7 @@ int main()
 
     mergeSort(myarr, 0, 4);
 
-    cout << "Po sortowaniu Merge: " << endl;
+    cout << endl << "Po sortowaniu Merge: " << endl;
     for (int i = 0; i < 5; i++)
     {
         cout << myarr[i] << " ";
