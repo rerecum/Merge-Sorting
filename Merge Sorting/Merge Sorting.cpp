@@ -2,28 +2,31 @@
 
 using namespace std;
 
+void mergeSort(int arr[], int lewy, int prawy)
+{
 
+}
 
 int main()
 {
-    //int arr[5] = { 4,6,1,2,7 };
-    int arr[5];
+    int myarr[5];
     for (int i = 0; i < 5; i++)
     {
-        cin >> arr[i];
+        cin >> myarr[i];
     }
     cout << "Przed sortowaniem Merge: " << endl;
     for (int i = 0; i < 5; i++)
     {
-        cout << arr[i] << " ";
+        cout << myarr[i] << " ";
     }
 
     // mergesort function
+    mergeSort(myarr, 0, 4);
 
     cout << "Po sortowaniu Merge: " << endl;
     for (int i = 0; i < 5; i++)
     {
-        cout << arr[i] << " ";
+        cout << myarr[i] << " ";
     }
     return 0;
 }
