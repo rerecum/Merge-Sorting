@@ -4,7 +4,42 @@ using namespace std;
 
 void merge(int arr[], int lewy, int m, int prawy)
 {
+    int i = lewy; // starting index for left subarray
+    int j = m + 1; // starting index for right subarray
+    int k = lewy; // starting index for temporary
+    int temp[5]; // temporary
 
+    while (i <= m && j <= prawy)
+    {
+        if (arr[i] <= arr[j])
+        {
+            temp[k] = arr[i];
+            i++;
+            k++;
+        }
+        else
+        {
+            temp[k] = arr[j];
+            j++;
+            k++;
+        }
+    }
+    while (i <= m)
+    {
+        temp[k] = arr[i];
+        i++;
+        k++;
+    }
+    while (j <= prawy)
+    {
+        temp[k] = arr[j];
+        j++;
+        k++;
+    }
+    for (int s = 0; s < 5; s++)
+    {
+        arr[s] = temp[s];
+    }
 }
 
 void mergeSort(int arr[], int lewy, int prawy)
@@ -31,7 +66,6 @@ int main()
         cout << myarr[i] << " ";
     }
 
-    // mergesort function
     mergeSort(myarr, 0, 4);
 
     cout << "Po sortowaniu Merge: " << endl;
