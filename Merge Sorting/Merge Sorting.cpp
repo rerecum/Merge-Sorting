@@ -1,4 +1,6 @@
-﻿#include <iostream>
+﻿//Merge Sort
+//Kacper Hnatyszyn 3prT5
+#include <iostream>
 
 using namespace std;
 
