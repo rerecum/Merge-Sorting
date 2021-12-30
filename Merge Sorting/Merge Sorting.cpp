@@ -2,9 +2,20 @@
 
 using namespace std;
 
-void mergeSort(int arr[], int lewy, int prawy)
+void merge(int arr[], int lewy, int m, int prawy)
 {
 
+}
+
+void mergeSort(int arr[], int lewy, int prawy)
+{
+    if (lewy < prawy)
+    {
+        int m = (lewy + prawy) / 2;
+        mergeSort(arr, lewy, m);
+        mergeSort(arr, m+1, prawy);
+        merge(arr, lewy, m, prawy);
+    }
 }
 
 int main()
